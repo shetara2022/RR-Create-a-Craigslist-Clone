@@ -1,9 +1,13 @@
 import React from 'react'
+import { Posting } from './posting'
 
 export const Gallery = function (props) {
     return (
-        <h2>Gallery</h2>
-
-        // return <Posting posting={p}
+        <div>
+            <h2>Gallery</h2>
+            {props.postings.map((p, i) => {
+                return <Posting posting={p} key={i} />
+            })}
+        </div>
     )
 }
